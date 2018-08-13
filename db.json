@@ -1,0 +1,54 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "Sebastian",
+      "lastName": "Eschweiler",
+      "email": "sebastian@codingthesmartway.com",
+      "isActive": true,
+      "balance": "111",
+      "phone": "111-111-1111",
+      "registered": false
+    },
+    {
+      "id": 2,
+      "firstName": "Steve",
+      "lastName": "Palmer",
+      "email": "steve@codingthesmartway.com",
+      "isActive": true,
+      "balance": "111",
+      "phone": "111-111-1111",
+      "registered": false
+    },
+    {
+      "id": 3,
+      "firstName": "Ann",
+      "lastName": "Smith",
+      "email": "ann@codingthesmartway.com",
+      "isActive": true,
+      "balance": "111",
+      "phone": "111-111-1111",
+      "registered": false
+    },
+    {
+      "id": 4,
+      "firstName": "Aya",
+      "lastName": "Smith",
+      "email": "ann@codingthesmartway.com",
+      "isActive": true,
+      "balance": "111",
+      "phone": "111-111-1111",
+      "registered": false
+    },
+    {
+      "id": 5,
+      "firstName": "Anton",
+      "lastName": "Smith",
+      "email": "2000.com",
+      "isActive": false,
+      "balance": "100",
+      "phone": "(099)616-00-25",
+      "registered": false
+    }
+  ]
+}
