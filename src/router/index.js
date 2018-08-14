@@ -2,10 +2,10 @@ import Vue        from 'vue'
 import Router     from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Part       from '@/components/part'
-import Table      from '@/components/table'
+import List       from '@/components/list'
+import UserEdit   from '@/components/UserEdit.vue'
 
-
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
@@ -20,9 +20,15 @@ export default new Router({
       component: Part
     },
     {
-      path: '/table',
-      name: 'Table',
-      component: Table
+      path: '/list',
+      name: 'List',
+      component: List
+    },
+    {
+      path: '/user/:id',
+      component: UserEdit,
+      props: true
     }
   ]
+
 })

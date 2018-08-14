@@ -1,13 +1,13 @@
 <template>
+
   <div id="app">
+    <ul class="nav">
+      <router-link class="rout-item" tag="li" to="/page"><a href="">page</a></router-link>
+      <router-link class="rout-item" tag="li" to="/list"><a href="">list</a></router-link>
+    </ul>
     <router-link to="/">
       <img src="./assets/logo.png">
     </router-link><br/>
-    <ul>
-      <router-link class="rout-item" tag="li" to="/page"><a href="">go to page</a></router-link>
-      <router-link class="rout-item" tag="li" to="/table"><a href="">go to table</a></router-link>
-    </ul>
-
     <router-view/>
   </div>
 </template>

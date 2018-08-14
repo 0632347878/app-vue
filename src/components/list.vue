@@ -29,7 +29,7 @@
 
 <script>
     export default {
-        name: 'Table',
+    name: 'Table',
         data: () => ({
         url: 'http://localhost:3000/employees',
         users: [],
@@ -50,7 +50,6 @@
                     xmlhttp.send();
                 }
                 customGet(this.url, function ( response ) {
-                    console.log(response);
                      _self.employees = response;
                 });
             }
@@ -61,8 +60,19 @@
     }
 </script>
 
-<style>
+<style scoped>
     .table-users {
         margin-top: 30px;
+    }
+    ul {
+        display: block;
+    }
+    li {
+        display: inline-block;
+        padding: 5px;
+        background: rgba( 255, 255, 0, 0);
+    }
+    .rout-item.router-link-exact-active {
+        border: 1px solid #ccc;
     }
 </style>
