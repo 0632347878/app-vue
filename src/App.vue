@@ -1,9 +1,8 @@
 <template>
-
-  <div id="app">
-    <ul class="nav">
-      <router-link class="rout-item" tag="li" to="/page"><a href="">page</a></router-link>
-      <router-link class="rout-item" tag="li" to="/list"><a href="">list</a></router-link>
+  <div class="" id="app">
+    <ul class="rout">
+      <router-link class="rout-item" tag="li" to="/page"><a href="">main page</a></router-link>
+      <router-link class="rout-item" tag="li" to="/list" active-class="custom-class"><a href="">users</a></router-link>
     </ul>
     <router-link to="/">
       <img src="./assets/logo.png">
@@ -23,18 +22,36 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 0 20px;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 ul {
   list-style: none;
 }
+a:hover {
+  text-decoration: none;
+}
+.rout {
+  background: rgba(0,0,0, .1);
+  text-align: left;
+}
 .rout-item {
   margin: 10px;
+  text-align: center;
+  width: 10%;
+  display: inline-block;
+  border: 1px solid #333;
+  box-shadow: 0 0 3px #000;
+  transition: box-shadow, background .3s ease;
+}
+.rout-item:hover {
+  background: rgba(0,0,0, .05);
+  transition: box-shadow, background .3s ease;
+  box-shadow: 0 0 1px #000;
 }
 .rout-item a {
-  display: inline-block;
+  color: inherit;
+  display: block;
+  padding: 5px;
 }
 </style>

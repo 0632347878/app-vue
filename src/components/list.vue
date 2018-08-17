@@ -33,25 +33,40 @@
         data: () => ({
         url: 'http://localhost:3000/employees',
         users: [],
+        target: document.querySelector('.numbers'),
         employees: {}
         }),
         methods: {
+
             loadData() {
-                let _self = this;
-                function customGet ( url, cb ) {
-                    var xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            var data = JSON.parse(xmlhttp.response);
-                            cb(data);
-                        }
-                    };
-                    xmlhttp.open("GET", url, true);
-                    xmlhttp.send();
-                }
-                customGet(this.url, function ( response ) {
-                     _self.employees = response;
-                });
+                var _self = this;
+
+//                XHR
+
+//                let _self = this;
+//                function customGet ( url, cb ) {
+//                    var xmlhttp = new XMLHttpRequest();
+//                    xmlhttp.onreadystatechange = function() {
+//                        if (this.readyState == 4 && this.status == 200) {
+//                            var data = JSON.parse(xmlhttp.response);
+//                            cb(data);
+//                        }
+//                    };
+//                    xmlhttp.open("GET", url, true);
+//                    xmlhttp.send();
+//                }
+//                customGet(this.url, function ( response ) {
+//                     _self.employees = response;
+//                });
+
+//              Fetch
+
+                fetch(_self.url)
+                    .then(function(response) {
+                        response.json().then(function(data){
+                            _self.employees = data;
+                        });
+                    })
             }
         },
         mounted() {
