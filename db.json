@@ -8,7 +8,8 @@
       "isActive": true,
       "balance": "750",
       "phone": "111-111-1111",
-      "registered": false
+      "registered": false,
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png"
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "isActive": true,
       "balance": "200",
       "phone": "111-111-1111",
-      "registered": false
+      "registered": false,
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/mnljdjtrh44x4snmierh.png"
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "isActive": true,
       "balance": "350",
       "phone": "111-111-1111",
-      "registered": false
+      "registered": false,
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png"
     },
     {
       "id": 4,
@@ -38,7 +41,8 @@
       "isActive": true,
       "balance": "0",
       "phone": "111-111-1111",
-      "registered": false
+      "registered": false,
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png"
     },
     {
       "id": 5,
@@ -48,7 +52,8 @@
       "isActive": false,
       "balance": "100",
       "phone": "(099)616-00-25",
-      "registered": false
+      "registered": false,
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/mnljdjtrh44x4snmierh.png"
     }
   ]
 }

@@ -3,6 +3,7 @@ import Router     from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Part       from '@/components/part'
 import List       from '@/components/list'
+import UserAdd   from '@/components/UserAdd.vue'
 import UserEdit   from '@/components/UserEdit.vue'
 
 Vue.use(Router);
@@ -25,10 +26,13 @@ export default new Router({
       component: List
     },
     {
-      path: '/user/:id',
+      path: '/user/add',
+      component: UserAdd
+    },
+    {
+      path: '/employees/:id',
       component: UserEdit,
       props: true
     }
   ]
-
 })

@@ -13,7 +13,7 @@
             </tr>
             <tr v-for="employee in employees" :key="employee.id">
                 <td>
-                    <router-link :to="`/user/${employee.id}`"># {{ employee.id }}</router-link>
+                    <router-link :to="`/employees/${employee.id}`"># {{ employee.id }}</router-link>
                 </td>
                 <td> {{ employee.firstName }} </td>
                 <td> {{ employee.lastName }} </td>
