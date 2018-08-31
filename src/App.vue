@@ -4,16 +4,24 @@
       <router-link class="rout-item" tag="li" to="/page"><a href="">main page</a></router-link>
       <router-link class="rout-item" tag="li" to="/list" active-class="custom-class"><a href="">users</a></router-link>
     </ul>
-    <router-link to="/">
+
+    <router-link to="/" v-if="main">
       <img src="./assets/logo.png">
-    </router-link><br/>
+    </router-link>
+
     <router-view/>
+
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  computed:{
+    main(){
+      return this.$route.path === '/'
+    }
+  }
 }
 </script>
 
