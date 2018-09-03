@@ -3,28 +3,55 @@
     {
       "id": 1,
       "firstName": "Sebastia",
-      "lastName": "Eschweiler111",
-      "email": "sebastian@codingthesmartway.com",
+      "lastName": "Eschweildfklnvdflnbdlnbdnbldnblndbnl",
+      "email": "",
       "isActive": true,
       "balance": "750000",
       "phone": "111-111-1111",
       "registered": false,
       "registeredDate": "22.08.2018",
       "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
-      "true": ""
+      "true": "",
+      "newUser": {
+        "id": "",
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "isActive": "",
+        "balance": "",
+        "phone": "",
+        "registered": "",
+        "registeredDate": "",
+        "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
+        "true": ""
+      },
+      "http://localhost:3000/employees/[object Object]": ""
     },
     {
       "id": 2,
       "firstName": "Steve",
       "lastName": "Palmer",
-      "email": "steve@codingthesmartway.com",
+      "email": "gngngn",
       "isActive": true,
       "balance": "200",
       "phone": "111-111-1111",
       "registered": false,
       "registeredDate": "10.08.2011",
       "picture": "//images.igdb.com/igdb/image/upload/t_thumb/mnljdjtrh44x4snmierh.png",
-      "true": ""
+      "true": "",
+      "newUser": {
+        "id": "",
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "isActive": "",
+        "balance": "",
+        "phone": "",
+        "registered": "",
+        "registeredDate": "",
+        "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
+        "true": ""
+      }
     },
     {
       "id": 3,
@@ -49,7 +76,8 @@
       "phone": "111-111-1111",
       "registered": false,
       "registeredDate": "31.08.201",
-      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png"
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
+      "http://localhost:3000/employees/[object Object]": ""
     },
     {
       "id": 5,
@@ -114,7 +142,8 @@
       "registered": false,
       "registeredDate": "18.09.2020",
       "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
-      "true": ""
+      "true": "",
+      "http://localhost:3000/employees/[object Object]": ""
     },
     {
       "id": 10,
@@ -204,6 +233,45 @@
       "phone": "111-111-1111",
       "registered": false,
       "registeredDate": "18.09.2020",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
+      "true": ""
+    },
+    {
+      "id": 17,
+      "firstName": "thkdtgfp[khgf[hkg",
+      "lastName": "dfghgfhlgf[hgfh",
+      "email": "fghgfh;gfhgf;hgfhghh",
+      "isActive": "gfhgfhdgf]lkljsfgjgfj",
+      "balance": "ktjshpitjh",
+      "phone": "jdfphjdfphj",
+      "registered": "djgdpfigjdpfigjdfpgjdfg",
+      "registeredDate": "",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
+      "true": ""
+    },
+    {
+      "id": 18,
+      "firstName": "234642934",
+      "lastName": "'k'fksdfdf",
+      "email": "cvblmcv';bb",
+      "isActive": "fghmgf[hgfmhgfh",
+      "balance": "cvbcvbcvb",
+      "phone": "bcvbcvb",
+      "registered": "cvbbcvbb",
+      "registeredDate": "25.09.2018",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
+      "true": ""
+    },
+    {
+      "id": 19,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "isActive": "",
+      "balance": "",
+      "phone": "",
+      "registered": "",
+      "registeredDate": "",
       "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
       "true": ""
     }

@@ -15,7 +15,7 @@
 											 tag="button"
 											 :to="'/employees/' + (parseInt(id, 10) + 1 )">+1 user
 					</router-link>
-					<user-add   @login="onLogin">
+					<user-add @login="onLogin">
 
 					</user-add>
 				</div>
@@ -40,7 +40,7 @@
 		data () {
 			return {
 				url: 'http://localhost:3000/employees/',
-				employee: Object
+				employee: Object,
 //      startValue: 55,
 //			interval: null
 			}
@@ -95,7 +95,13 @@
 			})
 			},
 			onLogin(data) {
-				console.log('child component said login', data)
+//				console.log('child component said login', data)
+				var _self = this;
+				//actual user obj _self.employee
+				axios.post(_self.url, data.newUser)
+					.then(() => {
+					this.$router.push({path: '/list'})
+			})
 			}
 		},
 		mounted () {

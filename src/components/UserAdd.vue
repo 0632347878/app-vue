@@ -7,31 +7,34 @@
 
 <script>
     const addUser = {
-        id: '',
-        firstName: "",
-        lastName: "",
-        email: "",
-        isActive: "",
-        balance: "",
-        phone: "",
-        registered: "",
-        registeredDate: "",
-        picture: "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
-        true: ""
+
     };
 
     export default {
         data () {
             return {
                 add: '',
-                email: ''
+                email: '',
+                addUser: {
+                    id: '',
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    isActive: "",
+                    balance: "",
+                    phone: "",
+                    registered: "",
+                    registeredDate: "",
+                    picture: "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
+                    true: ""
+                }
             }
         },
         name: 'UserAdd',
         methods: {
             login () {
                 this.$emit('login', {
-                    add: this.add.value,
+                    newUser: this.addUser,
                     email: this.email
                 })
             }
