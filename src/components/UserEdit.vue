@@ -15,7 +15,7 @@
 											 tag="button"
 											 :to="'/employees/' + (parseInt(id, 10) + 1 )">+1 user
 					</router-link>
-					<user-add @login="onLogin">
+					<user-add @login="add">
 
 					</user-add>
 				</div>
@@ -89,12 +89,12 @@
 			remove() {
 				var _self = this;
 				//actual user obj _self.employee
-				axios.patch(_self.userUrl, delete _self.url[_self.employee])
+				axios.delete(`${this.url}${this.id}`)
 					.then(() => {
 					this.$router.push({path: '/list'})
 			})
 			},
-			onLogin(data) {
+			add(data) {
 //				console.log('child component said login', data)
 				var _self = this;
 				//actual user obj _self.employee

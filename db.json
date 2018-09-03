@@ -28,32 +28,6 @@
       "http://localhost:3000/employees/[object Object]": ""
     },
     {
-      "id": 2,
-      "firstName": "Steve",
-      "lastName": "Palmer",
-      "email": "gngngn",
-      "isActive": true,
-      "balance": "200",
-      "phone": "111-111-1111",
-      "registered": false,
-      "registeredDate": "10.08.2011",
-      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/mnljdjtrh44x4snmierh.png",
-      "true": "",
-      "newUser": {
-        "id": "",
-        "firstName": "",
-        "lastName": "",
-        "email": "",
-        "isActive": "",
-        "balance": "",
-        "phone": "",
-        "registered": "",
-        "registeredDate": "",
-        "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
-        "true": ""
-      }
-    },
-    {
       "id": 3,
       "firstName": "Anniin",
       "lastName": "Smith",
@@ -264,6 +238,32 @@
     },
     {
       "id": 19,
+      "firstName": ",f db;dfb mdf kb d;fbdfb",
+      "lastName": "xzcvxcvxcv",
+      "email": "",
+      "isActive": "",
+      "balance": "",
+      "phone": "",
+      "registered": "",
+      "registeredDate": "",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
+      "true": ""
+    },
+    {
+      "id": 20,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "isActive": "",
+      "balance": "",
+      "phone": "",
+      "registered": "",
+      "registeredDate": "",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
+      "true": ""
+    },
+    {
+      "id": 21,
       "firstName": "",
       "lastName": "",
       "email": "",

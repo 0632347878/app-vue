@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Юзеров в базе <b>{{ employees.length }}</b></h3>
+        <h3>Юзеров в базе <b>{{ employees.length +1 }}</b></h3>
         <vue-single-select></vue-single-select>
         <table class="table table-bordered table-users">
             <thead>
@@ -73,9 +73,6 @@
                     _self.employees = data;
             });
         })
-    },
-        myCallback() {
-        console.log("there")
     }
     },
     mounted() {
