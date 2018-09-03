@@ -1,11 +1,6 @@
 <template>
 	<div class="user-wrapper">
 		<h3>- USER {{ id }} -</h3>
-		<!--<div> why I am alone{{ firstName }}</div>-->
-		<!--<div class="element">-->
-		<!--<span>there goes text</span>-->
-		<!--</div>-->
-		<!--<div class="numbers">{{ startValue }}</div>-->
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<!--<span>{{ id }}</span>-->
@@ -20,6 +15,9 @@
 											 tag="button"
 											 :to="'/employees/' + (parseInt(id, 10) + 1 )">+1 user
 					</router-link>
+					<user-add   @login="onLogin">
+
+					</user-add>
 				</div>
 
 			</div>
@@ -34,6 +32,7 @@
 
 <script>
 	import UserForm from './UserF.vue';
+	import UserAdd from './UserAdd.vue';
 	import axios from 'axios';
 
 	export default {
@@ -42,15 +41,16 @@
 			return {
 				url: 'http://localhost:3000/employees/',
 				employee: Object
-//                startValue: 55,
-//				interval: null
+//      startValue: 55,
+//			interval: null
 			}
 		},
 		props: {
 			id: String
 		},
 		components: {
-			UserForm
+			UserForm,
+			UserAdd
 		},
 		computed: {
 			userUrl () {
@@ -93,6 +93,9 @@
 					.then(() => {
 					this.$router.push({path: '/list'})
 			})
+			},
+			onLogin(data) {
+				console.log('child component said login', data)
 			}
 		},
 		mounted () {
@@ -133,5 +136,12 @@
 		display: inline-block;
 		padding: 15px;
 		background: rgba(0, 0, 0, .3);
+	}
+	.panel-heading > div {
+		display: flex;
+		justify-content: center;
+	}
+	.panel-heading button {
+		margin: 10px;
 	}
 </style>

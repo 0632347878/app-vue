@@ -110,7 +110,7 @@
     }
 </script>
 
-<style scope>
+<style>
     .table-user--own {
         padding: 10px;
         border-radius: 5px;

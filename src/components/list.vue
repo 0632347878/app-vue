@@ -1,17 +1,22 @@
 <template>
     <div>
+        <h3>Юзеров в базе <b>{{ employees.length }}</b></h3>
+        <vue-single-select></vue-single-select>
         <table class="table table-bordered table-users">
-            <tr>
-                <th>#</th>
-                <th>Имя</th>
-                <th>Фамилия</th>
-                <th>Активен</th>
-                <th>Баланс</th>
-                <th>Email</th>
-                <th>Телефон</th>
-                <th>Зарегистрирован</th>
-            </tr>
-            <tr v-for="employee in employees" :key="employee.id">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Активен</th>
+                    <th>Баланс</th>
+                    <th>Email</th>
+                    <th>Телефон</th>
+                    <th>Зарегистрирован</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(employee, index) in employees" :key="employee.id">
                 <td>
                     <router-link :to="`/employees/${employee.id}`"># {{ employee.id }}</router-link>
                 </td>
@@ -23,23 +28,24 @@
                 <td> {{ employee.phone }} </td>
                 <td> {{ employee.registered }} </td>
             </tr>
+            </tbody>
         </table>
     </div>
 </template>
 
 <script>
+    import UserForm from './UserF.vue';
+
     export default {
     name: 'Table',
-        data: () => ({
+    data: () => ({
         url: 'http://localhost:3000/employees',
         users: [],
-        target: document.querySelector('.numbers'),
         employees: {}
-        }),
-        methods: {
-
-            loadData() {
-                var _self = this;
+    }),
+    methods: {
+    loadData() {
+        var _self = this;
 
 //                XHR
 
@@ -61,17 +67,23 @@
 
 //              Fetch
 
-                fetch(_self.url)
-                    .then(function(response) {
-                        response.json().then(function(data){
-                            _self.employees = data;
-                        });
-                    })
-            }
-        },
-        mounted() {
-            this.loadData();
-        }
+        fetch(_self.url)
+            .then(function(response) {
+                response.json().then(function(data){
+                    _self.employees = data;
+            });
+        })
+    },
+        myCallback() {
+        console.log("there")
+    }
+    },
+    mounted() {
+        this.loadData();
+    },
+    components: {
+        VueSingleSelect: () => import('@/components/VueSingleSelect.vue')
+    }
     }
 </script>
 
@@ -90,4 +102,5 @@
     .rout-item.router-link-exact-active {
         border: 1px solid #ccc;
     }
+
 </style>
