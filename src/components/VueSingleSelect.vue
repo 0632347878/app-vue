@@ -1,9 +1,11 @@
 <template>
 	<div>
-		<input class="selectpicker" v-model="value">
-		<button @click="checkValue">press</button>
+		<select @change="checkValue" class="selectpicker" v-model="limitationList">
+			<option value="4">5</option>
+			<option value="9">10</option>
+			<option value="14">15</option>
+		</select>
 	</div>
-
 </template>
 
 <script>
@@ -11,14 +13,14 @@
 	export default {
 		name: 'Select',
 		data: () => ({
-			value: '',
-			sign: 101
+			sign: 101,
+			limitationList: 4
 		}),
+
 		methods: {
 			checkValue ()  {
 				this.$emit('checkValue', {
-					value: this.value,
-					sign: this.sign
+					limitationList: this.limitationList
 				})
 			}
 		},

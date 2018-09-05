@@ -1,9 +1,10 @@
 <template>
     <div>
         <h3>Юзеров в базе <b>{{ employees.length }}</b></h3>
-        <vue-single-select @checkValue="onLogin" >
-
-        </vue-single-select>
+        <div>
+            <vue-single-select @checkValue="onLogin"></vue-single-select>
+            <button @click="showAll" class="btn btn-success">show all</button>
+        </div>
         <table class="table table-bordered table-users">
             <thead>
                 <tr>
@@ -32,18 +33,19 @@
                 </tr>
             </tbody>
         </table>
-        <button class="btn btn-success">show all</button>
         <ul class="pagination">
-            <li class="page-item"
+            <li @click="pageOne"
+                class="page-item"
                 :class="{ active: limitationList == 4 }">
                 <a class="page-link" href="#">1</a></li>
-            <li class="page-item"
+            <li @click="pageTwo"
+                class="page-item"
                 :class="{ active: limitationList == 9 }">
                 <a class="page-link" href="#">2</a></li>
-            <li class="page-item"
+            <li @click="pageThree"
+                class="page-item"
                 :class="{ active: limitationList == 14 }">
                 <a class="page-link" href="#">3</a></li>
-
         </ul>
     </div>
 </template>
@@ -53,52 +55,78 @@
 
     export default {
     name: 'Table',
-    data: () => ({
-        url: 'http://localhost:3000/employees',
-        users: [],
-        employees: {},
-        limitationList: 4
-    }),
-    methods: {
-    onLogin(data) {
-        console.log('child component send data', data)
+    data () {
+        return {
+            url: 'http://localhost:3000/employees',
+            users: [],
+            employees: {},
+            employeesConst: {},
+            employeesPageOne: {},
+            employeesPageTwo: {},
+            employeesPageThree: {},
+            limitationList: 4
+        }
     },
-    loadData() {
-        var _self = this;
+    methods: {
+        pageOne () {
+            this.employees = this.employeesPageOne
+        },
+        pageTwo () {
+            this.employees = this.employeesPageTwo
+        },
+        pageThree () {
+            this.employees = this.employeesPageThree
+        },
+        onLogin(data) {
+            console.log('child component send data', data);
+            this.limitationList = data.limitationList
+        },
+        showAll() {
+            this.employees = this.employeesConst;
+            this.limitationList = this.employeesConst.length
+        },
+        loadData() {
+            var _self = this;
 
-//                XHR
+    //                XHR
 
-//                let _self = this;
-//                function customGet ( url, cb ) {
-//                    var xmlhttp = new XMLHttpRequest();
-//                    xmlhttp.onreadystatechange = function() {
-//                        if (this.readyState == 4 && this.status == 200) {
-//                            var data = JSON.parse(xmlhttp.response);
-//                            cb(data);
-//                        }
-//                    };
-//                    xmlhttp.open("GET", url, true);
-//                    xmlhttp.send();
-//                }
-//                customGet(this.url, function ( response ) {
-//                     _self.employees = response;
-//                });
+    //                let _self = this;
+    //                function customGet ( url, cb ) {
+    //                    var xmlhttp = new XMLHttpRequest();
+    //                    xmlhttp.onreadystatechange = function() {
+    //                        if (this.readyState == 4 && this.status == 200) {
+    //                            var data = JSON.parse(xmlhttp.response);
+    //                            cb(data);
+    //                        }
+    //                    };
+    //                    xmlhttp.open("GET", url, true);
+    //                    xmlhttp.send();
+    //                }
+    //                customGet(this.url, function ( response ) {
+    //                     _self.employees = response;
+    //                });
 
-//              Fetch
+    //              Fetch
 
-        fetch(_self.url)
-            .then(function(response) {
-                response.json().then(function(data){
-                    _self.employees = data;
-            });
-        })
-    }
+            fetch(_self.url)
+                .then(function(response) {
+                    response.json().then(function(data){
+                        _self.employees = data;
+                        _self.employeesConst = data;
+                        _self.employeesPageOne   = _self.employees.slice(0,5);
+                        _self.employeesPageTwo   = _self.employees.slice(5,10);
+                        _self.employeesPageThree = _self.employees.slice(10,15)
+                });
+            })
+        }
     },
     mounted() {
         this.loadData();
     },
     components: {
-        VueSingleSelect: () => import('@/components/VueSingleSelect.vue')
+        VueSingleSelect () {
+          return import('@/components/VueSingleSelect.vue')
+        }
     }
     }
 </script>
@@ -115,8 +143,11 @@
         padding: 5px;
         background: rgba( 255, 255, 0, 0);
     }
-    .rout-item.router-link-exact-active {
-        border: 1px solid #ccc;
+    h3 + div {
+        display: flex;
+        justify-content: space-between;
+        width : 200px;
+        margin: auto;
     }
 
 </style>
