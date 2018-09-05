@@ -28,6 +28,19 @@
       "http://localhost:3000/employees/[object Object]": ""
     },
     {
+      "id": 2,
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "isActive": "",
+      "balance": "",
+      "phone": "",
+      "registered": "",
+      "registeredDate": "",
+      "picture": "//images.igdb.com/igdb/image/upload/t_thumb/z5t0yuhyiiui1ickwhgj.png",
+      "true": ""
+    },
+    {
       "id": 3,
       "firstName": "Anniin",
       "lastName": "Smith",

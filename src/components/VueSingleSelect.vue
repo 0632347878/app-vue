@@ -1,9 +1,9 @@
 <template>
-	<select @change="checkAmount" class="selectpicker" v-model="selected">
-		<option value="5">5</option>
-		<option value="10">10</option>
-		<option value="15">15</option>
-	</select>
+	<div>
+		<input class="selectpicker" v-model="value">
+		<button @click="checkValue">press</button>
+	</div>
+
 </template>
 
 <script>
@@ -11,18 +11,22 @@
 	export default {
 		name: 'Select',
 		data: () => ({
-			selected: 5
+			value: '',
+			sign: 101
 		}),
 		methods: {
-			checkAmount: () => {
-				this.$emit('myCallback')
+			checkValue ()  {
+				this.$emit('checkValue', {
+					value: this.value,
+					sign: this.sign
+				})
 			}
 		},
 		props: {
 
 		},
 		mounted() {
-//			this.checkAmount()
+		//			this.checkAmount()
 		}
 	}
 </script>
